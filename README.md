@@ -1,4 +1,6 @@
-# Template for Vue Projects
+# Bitcoin Viewer
+
+A panel to track Bitcoin price
 
 ## Project setup
 ```
@@ -7,7 +9,7 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run dev
 ```
 
 ### Compiles and minifies for production
