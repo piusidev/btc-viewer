@@ -1,25 +1,20 @@
 <template>
   <div id="app">
     <theme-provider>
+      <coin />
     </theme-provider>
   </div>
 </template>
 
 <script>
-// import Switcher from './theme/Switcher.vue'
 import ThemeProvider from './theme/ThemeProvider.vue'
-import stream from './service/websocket'
+import Coin from './components/Coin.vue'
 
 export default {
   name: 'App',
   components: {
     ThemeProvider,
-  },
-  created: () => {
-    stream('BTCUSDT', (resp) => {
-      console.log(resp.data.c)
-    })
+    Coin
   }
-
 }
 </script>

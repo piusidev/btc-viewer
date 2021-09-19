@@ -16,7 +16,6 @@ export default (symbol, callback) => {
   }
 
   conn.onmessage = (resp) => {
-    let data = JSON.parse(resp.data)
-    callback(data)
+    callback(JSON.parse(resp.data))
   }
 }
