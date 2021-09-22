@@ -22,7 +22,6 @@ export default {
   name: 'coin',
   data: function () {
     return {
-      stream,
       price: null,
       crypto: null,
       currency: null,

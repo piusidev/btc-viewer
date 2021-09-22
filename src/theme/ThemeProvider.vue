@@ -42,7 +42,7 @@ body {
 
 [theme="light"] {
   --background: #f8f8f2;
-  --backgroundAlt: #1d1e26;
+  --backgroundAlt: transparent;
   --text: #282a36;
 }
 </style>
