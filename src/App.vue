@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <theme-provider>
-      <coin />
+      <main>
+        <coin />
+      </main>
     </theme-provider>
   </div>
 </template>
@@ -18,3 +20,18 @@ export default {
   }
 }
 </script>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  background: var(--background);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>

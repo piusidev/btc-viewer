@@ -25,11 +25,13 @@ export default {
 <style>
 [theme="dark"] {
   --background: #282a36;
+  --backgroundAlt: #1d1e26;
   --text: #f8f8f2;
 }
 
 [theme="light"] {
   --background: #f8f8f2;
+  --backgroundAlt: #1d1e26;
   --text: #282a36;
 }
 </style>
