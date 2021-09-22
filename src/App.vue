@@ -27,6 +27,7 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
+
 main {
   background: var(--background);
   height: 100vh;

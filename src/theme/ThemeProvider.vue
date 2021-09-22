@@ -23,6 +23,17 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+  --error: #ff5555;
+  --success:  #8be9fd;
+}
+
 [theme="dark"] {
   --background: #282a36;
   --backgroundAlt: #1d1e26;
