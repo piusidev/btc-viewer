@@ -1,8 +1,9 @@
 <template>
-  <div>
+  <div class="chart">
     <chart
       :chartdata="datacollection"
-    ></chart>
+      :options="options"
+    />
   </div>
 </template>
 
@@ -13,11 +14,12 @@ import data from '../../service/chartdata'
 export default {
   name: 'CryptoChart',
   components: {
-    Chart
+    Chart,
   },
   data: function () {
     return {
       datacollection: null,
+      options: null
     };
   },
   created: function () {
@@ -32,8 +34,14 @@ export default {
             label: "Bitcoin",
             borderColor: "rgb(138, 255, 128)",
             data: data.map(crypto => crypto.price),
+            // TODO implement dynamic data from https://docs.cryptowat.ch/rest-api/markets/ohlc
           },
         ]
+      }
+
+      this.options = {
+        responsive: true,
+        maintainAspectRatio: false
       }
     },
   }
@@ -41,4 +49,9 @@ export default {
 </script>
 
 <style>
+.chart {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+}
 </style>

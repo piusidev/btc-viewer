@@ -1,15 +1,18 @@
 <template>
   <div class="border-card">
     <div class="crypto-card">
-      <div class="percent">
-        <span :class="[percent < 0 ? 'error' : 'success']">
-          {{ percent }}
-        </span>
+      <div v-if="loaded">
+        <div class="percent">
+          <span :class="[percent < 0 ? 'error' : 'success']">
+            {{ percent }}
+          </span>
+        </div>
+        <div>
+          <div class="crypto">{{ crypto }}</div>
+          <div class="price">{{ price }}</div>
+        </div>
       </div>
-      <div>
-        <div class="crypto">{{ crypto }}</div>
-        <div class="price">{{ price }}</div>
-      </div>
+      <loader v-else />
     </div>
   </div>
 </template>
@@ -17,15 +20,20 @@
 <script>
 import stream from '../service/websocket'
 import utils from '../utils/'
+import Loader from './Loader.vue'
 
 export default {
   name: 'coin',
+  components: {
+    Loader
+  },
   data: function () {
     return {
       price: null,
       crypto: null,
       currency: null,
-      percent: null
+      percent: null,
+      loaded: false
     }
   },
   created: function () {
@@ -33,6 +41,7 @@ export default {
       this.price = resp.data.c
       this.crypto = resp.data.s
       this.percent = utils.formatPercent(resp.data.P)
+      this.loaded = true
     })
   }
 }

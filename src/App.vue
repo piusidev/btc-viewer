@@ -37,11 +37,13 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding: 1rem;
+  gap: 2rem;
 }
 
 @media (max-width: 768px) {
   main {
-    height: 100%;
+    min-height: 100vh;
     flex-direction: column;
   }
 }
