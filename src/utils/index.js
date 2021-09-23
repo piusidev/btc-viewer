@@ -5,7 +5,7 @@ const formatPercent = (number) => {
     return percent
   }
 
-  return `+${percent}`
+  return `+${percent}%`
 }
 
 const formatDolar = (number) => {
