@@ -3,6 +3,7 @@
     <theme-provider>
       <main>
         <coin />
+        <crypto-chart />
       </main>
     </theme-provider>
   </div>
@@ -11,12 +12,14 @@
 <script>
 import ThemeProvider from './theme/ThemeProvider.vue'
 import Coin from './components/Coin.vue'
+import CryptoChart from './components/Chart/CryptoChart.vue'
 
 export default {
   name: 'App',
   components: {
     ThemeProvider,
-    Coin
+    Coin,
+    CryptoChart,
   }
 }
 </script>
@@ -33,6 +36,13 @@ main {
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+  main {
+    height: 100%;
+    flex-direction: column;
+  }
 }
 </style>
